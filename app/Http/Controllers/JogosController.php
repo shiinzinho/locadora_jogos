@@ -17,6 +17,7 @@ class JogosController extends Controller
             'plataformas'=> $request-> plataformas,
             'desenvolvedor'=> $request-> desenvolvedor,
             'distribuidora'=> $request-> distribuidora,
+            'categoria'=> $request-> categoria,
 
         ]);
         return response()->json([

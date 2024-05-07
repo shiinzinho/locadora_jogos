@@ -43,8 +43,9 @@ class JogosFormRequest extends FormRequest
         ]));
     }
 
-    public function messages(){
-        return[
+    public function messages()
+    {
+        return [
             'nome.required' => 'O campo nome é obrigatório',
             'nome.max' => 'O campo nome deve conter no máximo 120 caracteres',
             'nome.min' => 'O campo nome deve conter no mínimo 5 caracteres',
@@ -70,8 +71,6 @@ class JogosFormRequest extends FormRequest
             'categoria.required' => 'O campo categoria é obrigatório',
             'categoria.max' => 'O campo categoria deve conter no máximo 55 caracteres',
             'categoria.min' => 'O campo categoria deve conter no mínimo 3 caracteres',
-            
-
         ];
-}
+    }
 }

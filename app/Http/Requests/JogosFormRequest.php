@@ -25,7 +25,7 @@ class JogosFormRequest extends FormRequest
     {
         return [
             'nome' => 'required|max:120|min:5|unique:jogos,nome',
-            'preco' => 'required|decimal:12,2',
+            'preco' => 'required|decimal:2',
             'descricao' => 'required|max:800|min:10',
             'classificacao' => 'required|max:20|min:5',
             'plataformas' => 'required|max:60|min:3',
@@ -38,7 +38,7 @@ class JogosFormRequest extends FormRequest
     public function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(response()->json([
-            'success' => false,
+            'status' => false,
             'error' => $validator->errors()
         ]));
     }
@@ -51,8 +51,7 @@ class JogosFormRequest extends FormRequest
             'nome.min' => 'O campo nome deve conter no mínimo 5 caracteres',
             'nome.unique' => 'Nome já cadastrado no sistema',
             'preco.required' => 'O campo preço é obrigatório',
-            'preco.max' => 'O campo preço deve conter no máximo 10 caracteres e 2 casas após a vírgula',
-            'preco.decimal' => 'O campo preço deve ser em decimal',
+            'preco.decimal' => 'O campo preço deve conter 2 casas decimais',
             'descricao.required' => 'O campo descrição é obrigatório',
             'descricao.max' => 'O campo descrição deve conter no máximo 800 caracteres',
             'descricao.min' => 'O campo descrição deve conter no mínimo 10 caracteres',

@@ -17,5 +17,6 @@ class Jogos extends Model
         'plataformas',
         'desenvolvedor',
         'distribuidora',
+        'categoria',
     ];
 }

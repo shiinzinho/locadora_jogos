@@ -67,9 +67,10 @@ class JogosSeeder extends Seeder
             'Luta',
             'Tiro',
         ];
-
-        for ($i = 0; $i < 100; $i++) {
-            $randomPlatforms = array_rand($platforms, rand(1, count($platforms)));
+        for ($i = 0; $i < 200; $i++) {
+            $numberOfPlatforms = rand(1, count($platforms));
+            $randomPlatforms = array_rand($platforms, $numberOfPlatforms);
+            $randomPlatforms = is_array($randomPlatforms) ? $randomPlatforms : [$randomPlatforms];
             $platformsValues = array_map(function ($index) use ($platforms) {
                 return $platforms[$index];
             }, $randomPlatforms);

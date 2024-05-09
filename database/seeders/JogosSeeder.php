@@ -75,7 +75,7 @@ class JogosSeeder extends Seeder
                 return $platforms[$index];
             }, $randomPlatforms);
             Jogos::create([
-                'nome' => 'Game ' . $i,
+                'nome' => 'Jogo ' . $i,
                 'preco' => rand(19.99, 99.99),
                 'descricao' => $descriptions[array_rand($descriptions)],
                 'classificacao' => $classifications[array_rand($classifications)],

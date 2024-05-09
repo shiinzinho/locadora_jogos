@@ -14,6 +14,13 @@ Além disso, a Locadora de Jogos oferece um sistema de login e cadastro, permiti
 
 A Locadora de Jogos desenvolvida por quatro alunos do SENAI é um exemplo notável de como a tecnologia pode ser usada para criar soluções inovadoras e úteis. Com sua interface amigável e recursos avançados, a locadora tem o potencial de se tornar uma opção popular para os amantes de jogos eletrônicos.
 
+Alunos:
+Gabriel dos Santos Lacerda
+Gustavo Cantidio Melo
+João Victor Ribeiro Oliveira
+João Pedro França Luiz
+
+
 ## Como utilizar este repositório
 
 1. Clone este repositório para o seu ambiente de desenvolvimento local utilizando o comando:
@@ -49,6 +56,6 @@ Este projeto está licenciado sob a [MIT License](LICENSE), o que significa que 
 ## Contato
 Em caso de dúvidas, sugestões ou problemas, sinta-se à vontade para entrar em contato através do email: joaofootz10@gmail.com
 
-**Aviso**: Certifique-se de substituir "casagrande7" no link de clonagem e "joaofootz10@gmail.com" na seção de contato pelos valores correspondentes do seu próprio usuário do GitHub e endereço de e-mail.
+**Aviso**: Certifique-se de substituir "SeuNomeNoGit" no link de clonagem e "SeuEmail@gmail.com" na seção de contato pelos valores correspondentes do seu próprio usuário do GitHub e endereço de e-mail.
 
 Este é apenas um modelo básico de README.md, você pode adaptar e melhorar conforme suas necessidades específicas de projeto. Certifique-se de incluir informações importantes sobre como configurar, executar e testar os exercícios, bem como qualquer outra documentação relevante para tornar o repositório mais amigável e útil para outros desenvolvedores.

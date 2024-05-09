@@ -9,7 +9,7 @@ Route::post('register/games', [JogosController::class, 'cadastroJogos']);
 
 Route::get('search/game/by/{id}', [JogosController::class, 'pesquisarIdJogos']);
 
-Route::post('search/game/by/name', [JogosController::class, 'pesquisarPorNomeJogo']);
+Route::post('search/game/by/name', [JogosController::class, 'pesquisarNomeJogo']);
 
 Route::get('return/all/games', [JogosController::class, 'retornarTodosJogos']);
 

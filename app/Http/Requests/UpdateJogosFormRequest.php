@@ -24,7 +24,7 @@ class UpdateJogosFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nome' => 'max:120|min:5|unique:jogos,nome' . $this->id,
+            'nome' => 'max:120|min:5|unique:jogos,nome,' . $this->id,
             'preco' => 'decimal:2',
             'descricao' => 'max:800|min:10',
             'classificacao' => 'max:20|min:5',
@@ -48,7 +48,6 @@ class UpdateJogosFormRequest extends FormRequest
         return [
             'nome.max' => 'O campo nome deve conter no máximo 120 caracteres',
             'nome.min' => 'O campo nome deve conter no mínimo 5 caracteres',
-            'nome.unique' => 'Nome já cadastrado no sistema',
             'preco.decimal' => 'O campo preço deve conter 2 casas decimais',
             'descricao.max' => 'O campo descrição deve conter no máximo 800 caracteres',
             'descricao.min' => 'O campo descrição deve conter no mínimo 10 caracteres',

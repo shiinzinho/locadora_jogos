@@ -25,7 +25,7 @@ João Pedro França Luiz
 
 1. Clone este repositório para o seu ambiente de desenvolvimento local utilizando o comando:
 ```
- git clone https://github.com/casagrande7/locadora_jogos.git
+ git clone https://github.com/shiinzinho/locadora_jogos.git
 ```
 2. Acesse o diretório do projeto:
 ```
@@ -47,6 +47,7 @@ code .
 
 
 ##Insomnia
+
 [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Locadora%20de%20Jogos&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fshiinzinho%2Flocadora_jogos%2Fmain%2FInsomnia.json)
 
 ## Licença
@@ -54,8 +55,8 @@ code .
 Este projeto está licenciado sob a [MIT License](LICENSE), o que significa que você pode utilizá-lo livremente para fins educacionais, comerciais ou pessoais.
 
 ## Contato
-Em caso de dúvidas, sugestões ou problemas, sinta-se à vontade para entrar em contato através do email: joaofootz10@gmail.com
+Em caso de dúvidas, sugestões ou problemas, sinta-se à vontade para entrar em contato através do email: gabrieldosantoslacerda@gmail.com
 
-**Aviso**: Certifique-se de substituir "SeuNomeNoGit" no link de clonagem e "SeuEmail@gmail.com" na seção de contato pelos valores correspondentes do seu próprio usuário do GitHub e endereço de e-mail.
+**Aviso**: Certifique-se de substituir o meu nome e o email do meu GitHub para o seu nome e email do GitHub no link de clonagem e na seção de contato pelos valores correspondentes do seu próprio usuário do GitHub e endereço de e-mail.
 
 Este é apenas um modelo básico de README.md, você pode adaptar e melhorar conforme suas necessidades específicas de projeto. Certifique-se de incluir informações importantes sobre como configurar, executar e testar os exercícios, bem como qualquer outra documentação relevante para tornar o repositório mais amigável e útil para outros desenvolvedores.

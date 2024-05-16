@@ -61,11 +61,18 @@ class JogosController extends Controller
     public function retornarTodosJogos()
     {
         $jogos = Jogos::all();
-        return response()->json([
-            'status' => true,
-            'data' => $jogos
-        ]);
-    }
+        if ($jogos->count() > 0) {
+            return response()->json([
+                'status' => true,
+                'data' => $jogos
+            ]);
+        } else {
+            return response()->json([
+                'status' => false,
+                'data' => "Nenhum jogo registrado"
+            ]);
+        }
+}
 
     public function atualizarJogos(UpdateJogosFormRequest $request)
     {

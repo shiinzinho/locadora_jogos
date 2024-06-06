@@ -74,45 +74,59 @@ class JogosController extends Controller
         }
 }
 
-    public function atualizarJogos(UpdateJogosFormRequest $request)
-    {
-        $jogos = Jogos::find($request->id);
-        if (!isset($jogos)) {
-            return response()->json([
-                'status' => false,
-                'message' => "Jogo não encontrado"
-            ]);
-        }
-        if (isset($request->nome)) {
-            $jogos->nome = $request->nome;
-        }
-        if (isset($request->preco)) {
-            $jogos->preco = $request->preco;
-        }
-        if (isset($request->descricao)) {
-            $jogos->descricao = $request->descricao;
-        }
-        if (isset($request->classificacao)) {
-            $jogos->classificacao = $request->classificacao;
-        }
-        if (isset($request->plataformas)) {
-            $jogos->plataformas = $request->plataformas;
-        }
-        if (isset($request->desenvolvedor)) {
-            $jogos->desenvolvedor = $request->desenvolvedor;
-        }
-        if (isset($request->distribuidora)) {
-            $jogos->distribuidora = $request->distribuidora;
-        }
-        if (isset($request->categoria)) {
-            $jogos->categoria = $request->categoria;
-        }
-        $jogos->update();
+public function atualizarJogos(UpdateJogosFormRequest $request)
+{
+    $jogos = Jogos::find($request->id);
+    if (!isset($jogos)) {
         return response()->json([
-            'status' => true,
-            'message' => "Jogo atualizado"
+            'tatus' => false,
+            'essage' => "Jogo não encontrado"
         ]);
     }
+
+    // Verificar se o nome do jogo já existe
+    $nome = $request->nome;
+    $existingJogo = Jogos::where('nome', $nome)
+        ->where('id', '!=', $jogos->id) // ignorar o jogo que está sendo editado
+        ->first();
+    if ($existingJogo) {
+        return response()->json([
+            'tatus' => false,
+            'essage' => "Nome: '$nome' já cadastrado no sistema"
+        ]);
+    }
+
+    // Atualizar o jogo
+    if (isset($request->nome)) {
+        $jogos->nome = $request->nome;
+    }
+    if (isset($request->preco)) {
+        $jogos->preco = $request->preco;
+    }
+    if (isset($request->descricao)) {
+        $jogos->descricao = $request->descricao;
+    }
+    if (isset($request->classificacao)) {
+        $jogos->classificacao = $request->classificacao;
+    }
+    if (isset($request->plataformas)) {
+        $jogos->plataformas = $request->plataformas;
+    }
+    if (isset($request->desenvolvedor)) {
+        $jogos->desenvolvedor = $request->desenvolvedor;
+    }
+    if (isset($request->distribuidora)) {
+        $jogos->distribuidora = $request->distribuidora;
+    }
+    if (isset($request->categoria)) {
+        $jogos->categoria = $request->categoria;
+    }
+    $jogos->update();
+    return response()->json([
+        'tatus' => true,
+        'essage' => "Jogo atualizado"
+    ]);
+}
 
     public function excluirJogos($id)
     {
